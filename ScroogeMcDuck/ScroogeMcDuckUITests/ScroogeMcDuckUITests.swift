@@ -35,7 +35,7 @@ class ScroogeMcDuckUITests: XCTestCase {
         XCTAssertTrue(additionalPensionLabel.exists)
     }
     
-    func testingSalaryCalculationWithTextField(){
+    func testingSalaryCalculationByTextField(){
         let input = "50"
         let answer = "30.0"
         
@@ -48,7 +48,7 @@ class ScroogeMcDuckUITests: XCTestCase {
         XCTAssertTrue(answerLabel.exists,"Details: Input was 50 and expected answer is 30")
     }
     
-    func testingSalaryCalculationWithSegmentedControlTap(){
+    func testingSalaryCalculationWithSegmentControlTap(){
         let input = "50"
         let answer = "29.0"
         

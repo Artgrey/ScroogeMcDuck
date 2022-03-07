@@ -4,7 +4,6 @@
 //
 //  Created by Krivenkis on 2022-02-22.
 //
-
 import UIKit
 
 class SalaryInputFieldView: UITextField {

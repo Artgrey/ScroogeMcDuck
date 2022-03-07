@@ -16,9 +16,9 @@
 		426EA5C42542F061003FFFE0 /* ScroogeMcDuckTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426EA5C32542F061003FFFE0 /* ScroogeMcDuckTests.swift */; };
 		426EA5CF2542F061003FFFE0 /* ScroogeMcDuckUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426EA5CE2542F061003FFFE0 /* ScroogeMcDuckUITests.swift */; };
 		F1CCFF8027C4B3320045E363 /* SalaryInputFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CCFF7F27C4B3320045E363 /* SalaryInputFieldView.swift */; };
-		F1CCFF8327C4B3580045E363 /* CalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CCFF8227C4B3580045E363 /* CalculatorViewModel.swift */; };
-		F1CCFF8727C4DB970045E363 /* SodraAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CCFF8627C4DB970045E363 /* SodraAPI.swift */; };
-		F1CCFF8927C51F8D0045E363 /* OptionSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CCFF8827C51F8D0045E363 /* OptionSegmentedControl.swift */; };
+		F1CCFF8327C4B3580045E363 /* SalaryCalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CCFF8227C4B3580045E363 /* SalaryCalculatorViewModel.swift */; };
+		F1CCFF8727C4DB970045E363 /* TaxService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CCFF8627C4DB970045E363 /* TaxService.swift */; };
+		F1CCFF8927C51F8D0045E363 /* PensionOptionSegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CCFF8827C51F8D0045E363 /* PensionOptionSegmentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,9 +54,9 @@
 		426EA5CE2542F061003FFFE0 /* ScroogeMcDuckUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScroogeMcDuckUITests.swift; sourceTree = "<group>"; };
 		426EA5D02542F061003FFFE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1CCFF7F27C4B3320045E363 /* SalaryInputFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalaryInputFieldView.swift; sourceTree = "<group>"; };
-		F1CCFF8227C4B3580045E363 /* CalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewModel.swift; sourceTree = "<group>"; };
-		F1CCFF8627C4DB970045E363 /* SodraAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SodraAPI.swift; sourceTree = "<group>"; };
-		F1CCFF8827C51F8D0045E363 /* OptionSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionSegmentedControl.swift; sourceTree = "<group>"; };
+		F1CCFF8227C4B3580045E363 /* SalaryCalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalaryCalculatorViewModel.swift; sourceTree = "<group>"; };
+		F1CCFF8627C4DB970045E363 /* TaxService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxService.swift; sourceTree = "<group>"; };
+		F1CCFF8827C51F8D0045E363 /* PensionOptionSegmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PensionOptionSegmentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +107,7 @@
 		426EA5AB2542F059003FFFE0 /* ScroogeMcDuck */ = {
 			isa = PBXGroup;
 			children = (
-				F1CCFF8527C4DB860045E363 /* Models */,
+				F1CCFF8527C4DB860045E363 /* Service */,
 				F1CCFF8427C4B35F0045E363 /* View Controller */,
 				F1CCFF8127C4B33A0045E363 /* View Model */,
 				F1CCFF7E27C4B3080045E363 /* Views */,
@@ -141,9 +141,9 @@
 		F1CCFF7E27C4B3080045E363 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				F1CCFF9327C61C560045E363 /* Storyboards */,
+				426EA5B22542F059003FFFE0 /* Main.storyboard */,
 				F1CCFF7F27C4B3320045E363 /* SalaryInputFieldView.swift */,
-				F1CCFF8827C51F8D0045E363 /* OptionSegmentedControl.swift */,
+				F1CCFF8827C51F8D0045E363 /* PensionOptionSegmentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -151,7 +151,7 @@
 		F1CCFF8127C4B33A0045E363 /* View Model */ = {
 			isa = PBXGroup;
 			children = (
-				F1CCFF8227C4B3580045E363 /* CalculatorViewModel.swift */,
+				F1CCFF8227C4B3580045E363 /* SalaryCalculatorViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -164,28 +164,12 @@
 			path = "View Controller";
 			sourceTree = "<group>";
 		};
-		F1CCFF8527C4DB860045E363 /* Models */ = {
+		F1CCFF8527C4DB860045E363 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				F1CCFF9227C61C3B0045E363 /* APIModel */,
+				F1CCFF8627C4DB970045E363 /* TaxService.swift */,
 			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		F1CCFF9227C61C3B0045E363 /* APIModel */ = {
-			isa = PBXGroup;
-			children = (
-				F1CCFF8627C4DB970045E363 /* SodraAPI.swift */,
-			);
-			path = APIModel;
-			sourceTree = "<group>";
-		};
-		F1CCFF9327C61C560045E363 /* Storyboards */ = {
-			isa = PBXGroup;
-			children = (
-				426EA5B22542F059003FFFE0 /* Main.storyboard */,
-			);
-			path = Storyboards;
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,13 +302,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1CCFF8727C4DB970045E363 /* SodraAPI.swift in Sources */,
+				F1CCFF8727C4DB970045E363 /* TaxService.swift in Sources */,
 				426EA5B12542F059003FFFE0 /* CalculatorViewController.swift in Sources */,
-				F1CCFF8927C51F8D0045E363 /* OptionSegmentedControl.swift in Sources */,
+				F1CCFF8927C51F8D0045E363 /* PensionOptionSegmentView.swift in Sources */,
 				426EA5AD2542F059003FFFE0 /* AppDelegate.swift in Sources */,
 				F1CCFF8027C4B3320045E363 /* SalaryInputFieldView.swift in Sources */,
 				426EA5AF2542F059003FFFE0 /* SceneDelegate.swift in Sources */,
-				F1CCFF8327C4B3580045E363 /* CalculatorViewModel.swift in Sources */,
+				F1CCFF8327C4B3580045E363 /* SalaryCalculatorViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,7 +485,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = JDKGKWNTDG;
 				INFOPLIST_FILE = ScroogeMcDuck/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -520,7 +504,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = JDKGKWNTDG;
 				INFOPLIST_FILE = ScroogeMcDuck/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

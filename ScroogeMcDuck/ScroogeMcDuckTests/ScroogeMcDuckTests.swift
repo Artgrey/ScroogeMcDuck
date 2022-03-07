@@ -10,18 +10,18 @@ import XCTest
 
 class ScroogeMcDuckTests: XCTestCase {
 
-    var viewModelSUT: CalculatorViewModel!
+    var viewModelSUT: SalaryCalculatorViewModel!
     var viewControllerSUT: CalculatorViewController!
     
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
         try super.setUpWithError()
-        viewModelSUT = CalculatorViewModel()
+        viewModelSUT = SalaryCalculatorViewModel()
         viewControllerSUT = CalculatorViewController()
     }
 
     func testViewModelSalaryCalculator() {
-        let input = viewModelSUT.getHomeSalary(45)
+        let input = viewModelSUT.updateTakeHomeSalaryLabel(45)
         XCTAssertEqual(input, "27.0", "Salary was calculated wrongly")
     }
     
